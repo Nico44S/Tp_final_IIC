@@ -8,13 +8,13 @@ def requisito_edad():
     while entrada == False:
         edad = int(input("Ingrese la edad del cliente: "))
         if edad >= 25 and edad <= 80:
-            edad = True
+            edad_1 = True
         elif edad > 80 and edad <= 105:
             print("Lo sentimos, no cumple con los requisitos de edad para alquilar")
-            edad = False
+            edad_1 = False
         elif edad < 25 and edad >= 0:
             print("Lo sentimos, no cumple con los requisitos de edad para alquilar")
-            edad = False
+            edad_1 = False
         else:
             print("Edad no es coherente")
         if edad >= 1 and edad <= 105:
@@ -159,13 +159,6 @@ def seleccion_vehiculo (region):
             ingrese 2 para frontier 4x4 = $180.000
             ingrese 3 para hilux 4x4 = $130.000
             ingrese 4 para etios = $40.000
-            ingrese 5 para Cronos = $50.000
-            ingrese 6 para C3 = $60.000
-            ingrese 7 para corolla cross = $170.000
-            ingrese 8 para taos = $145.000
-            ingrese 9 para hiace = $180.000
-            """)
-            print ("""
             ingrese 5 para Cronos = $50.000
             ingrese 6 para C3 = $60.000
             ingrese 7 para corolla cross = $170.000
@@ -401,7 +394,7 @@ if edad == True:
             print (f"{dia}/{mes}/2025")
             print (f"Nº de factura: {random.randint (100000, 9999999999)}")
             print (f"Empleado: {nombre_empleado}")
-            factura_cliente = ("Nombre y apellido: ", "Nº de factura: ", "Nacionalidad: ", "Domicilio: ", "Hospedaje: ", "Nº de DNI o Pasaporte: ", "Nº de telefono: ")
+            factura_cliente = ("Nombre y apellido: ", "Nacionalidad: ", "Domicilio: ", "Hospedaje: ", "Nº de DNI o Pasaporte: ", "Nº de telefono: ")
             factura_vehiculo = ("Tipo de vehiculo: ", "Precio: ", "Modelo: ", "Patente: ", "Nº Chasis: ", "Nº Motor: ", "Nº permiso municipal: ", "Precio del seguro: ")
             factura_alquiler = ("Descuento vip: ", "Descuento por temporada baja: ", "Recargo por zona: ", "Descuento/Recargo por la tarifa (Fin de semana, Diaria, Semanal o Mesual: )", "Descuento residente: ")
             print ("\nDatos del cliente: ")
@@ -412,7 +405,7 @@ if edad == True:
                 print (factura_vehiculo [i], datos_vehiculo [i])
             print ("\nDetalles del alquiler: ")
             print (f"Cantidad de dias: {cantidad_dias}")
-            print (f"Fecha de devolucion: {fecha_devolucion [1]}/{fecha_devolucion [2]}/{fecha_devolucion [3]}")
+            print (f"Fecha de devolucion: {fecha_devolucion [0]}/{fecha_devolucion [1]}/{fecha_devolucion [2]}")
             for i in range (5):
                 print (factura_alquiler [i], descuentos_y_recargos [i])
             print (f"Precio total: {precio_total}")
